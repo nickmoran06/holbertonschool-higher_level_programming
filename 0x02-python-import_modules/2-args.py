@@ -4,7 +4,7 @@ if __name__ == "__main__":
     len_arg = len(argv)
 
     if len_arg <= 1:
-        print("{:d} {:s}{:s}".format(len_arg - 1, "argument", "."))
+        print("{:d} {:s}{:s}".format(len_arg - 1, "arguments", "."))
     elif len_arg == 2:
         print("{:d} {:s}{:s}".format(len_arg - 1, "argument", ":"))
     else:
