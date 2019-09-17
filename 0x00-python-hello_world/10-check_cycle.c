@@ -9,13 +9,11 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *single = NULL, *doub = NULL;
+	listint_t *single = list, *doub = list;
 
-	single = list;
-	doub = list;
 	if (!list)
 		return (0);
-	while (single->next && doub->next->next)
+	while (single->next && doub->next  && doub->next->next)
 	{
 		single = single->next;
 		doub = doub->next->next;
