@@ -1,0 +1,101 @@
+DocTest - Test driven Development
+
+``0-add_integer`` module
+=================================
+
+Function ``add_integer``, the definition of the function is: ``def add_integer(a, b=98):``
+
+
+Verifying the importation of the function from the module:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Adding integers:
+
+    Base 10:
+    >>> add_integer(5, 6)
+    11
+
+    More than base 10:
+    >>> add_integer(60, 140)
+    200
+
+    Negative as second argument:
+    >>> add_integer(10, -6)
+    4
+
+    Negative as first argument:
+    >>> add_integer(-24, 1024)
+    1000
+
+Adding floatings:
+
+    Floats less than 10:
+    >>> add_integer(5.0, 6.5)
+    11
+
+    Floats more than 10:
+    >>> add_integer(60.2, 140.8)
+    200
+
+    Negative float as second argument:
+    >>> add_integer(10.3, -6.4)
+    4
+
+    Negative float as first argument:
+    >>> add_integer(-24.5, 1024.3)
+    1000
+
+
+Adding different types than integer or floating:
+
+    Lists:
+    >>> add_integer(10, list[-24.3])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Characters:
+    >>> add_integer(1024.5, "Nico")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Tuples:
+    >>> add_integer(-24.5, ('1024.3'))
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Dictionary:
+    >>> add_integer(1024.5, {"value": "-24.3"})
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    Boolean:
+    >>> add_integer(1024.5, True)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Adding with another format:
+
+    Any argument
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+    One argument:
+    >>> add_integer(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'b'
+
+    More than 2 arguments:
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes 2 positional arguments but 3 were given
