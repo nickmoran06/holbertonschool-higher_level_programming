@@ -1,0 +1,42 @@
+DocTest - Test driven Development
+
+``3-say_my_name`` module
+=================================
+
+Function ``say_my_name``, the definition of the function is:
+``def say_my_name(first_name, last_name=""):``
+
+
+Verifying the importation of the function from the module:
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Passing as a string the arguments:
+
+    Only the first name:
+    	>>> say_my_name("Nicolas")
+        My name is Nicolas 
+
+    First name and last name:
+    	>>> say_my_name("Cristiano", "Ronaldo")
+        My name is Cristiano Ronaldo
+
+Passing another type of variable as argument:
+
+    First name different of string:
+    	>>> say_my_name([12], "NICO")
+     	Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+    Last name different of string:
+	>>> say_my_name("CR", 7)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+More than 2 arguments:
+     >>> say_my_name("Cristiano", "Ronaldo", "7")
+     Traceback (most recent call last):
+     ...
+     TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
