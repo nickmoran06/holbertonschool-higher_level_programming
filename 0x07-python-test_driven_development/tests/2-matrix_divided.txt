@@ -1,0 +1,118 @@
+DocTest - Test driven Development
+
+``2-matrix_divided`` module
+=================================
+
+Function ``matrix_divided``, the definition of the function is:
+ ``def matrix_divided(matrix, div)``
+
+
+Verifying the importation of the function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Divided by integers or floats:
+
+    Divided integer by float:
+        >>> matrix = [[1, 2, 3], [4, 5, 6]]
+        >>> matrix_divided(matrix, 1.5)
+        [[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+
+    Divided floats by floats:
+        >>> matrix = [[1.5, 2.5, 3.5], [4.5, 5.5, 6.5]]
+        >>> matrix_divided(matrix, 1.5)
+        [[1.0, 1.67, 2.33], [3.0, 3.67, 4.33]]
+
+    Divided by 0:
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+    Divided by negative numbers:
+    	>>> matrix = [[-1, -2, -3], [-4, -5, -6]]
+	>>> matrix_divided(matrix, 2)
+	[[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0]]
+
+Divided by other types of varible:
+
+    Lists:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, [a])
+	Traceback (most recent call last):
+        ...
+	NameError: name 'a' is not defined
+
+    Characters:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, "a")
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+    Boolean:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, True)
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+    Dictionary:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, {"a": "b"})
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+    Tuple:
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, ('1'))
+	Traceback (most recent call last):
+        ...
+        TypeError: div must be a number
+
+Divided by lists of different size:
+
+    Many lists:
+        >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
+        >>> matrix_divided(matrix, 2)
+        [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0], [3.5, 4.0, 4.5], [5.0, 5.5, 6.0]]
+
+    One list of different size than the others:
+	>>> matrix = [[1, 2, 3], [4, 5]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+        ...
+	TypeError: Each row of the matrix must have the same size
+
+    Empty list:
+	>>> matrix = []
+	>>> matrix_divided(matrix, 2)
+	[]
+
+Matrix with another type than numbers:
+
+    >>> matrix = [('1'), {"a": "b"}, "c", True]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Format of more arguments:
+
+    Any argument:
+        >>> matrix_divided()
+	Traceback (most recent call last):
+        ...
+        TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+    One argument:
+    	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	...
+    	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    More than 2 arguments:
+    	>>> matrix_divided(matrix, 2, 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() takes 2 positional arguments but 3 were given
