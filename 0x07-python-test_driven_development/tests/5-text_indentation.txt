@@ -1,0 +1,59 @@
+DocTest - Test driven Development
+
+``5-text_identation`` module
+=================================
+
+Function ``print_square``, the definition of the function is: ``def print_square(size):``
+
+Verifying the importation of the function from the module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Checking with arguments of type str:
+
+    Without special characters:
+    	>>> text_indentation("Holberton School Bogota")
+    	Holberton School Bogota
+
+    With special characters:
+        >>> text_indentation("Holberton: Bogota, Tunisia and SF")
+    	Holberton:
+    	<BLANKLINE>
+    	Bogota,	Tunisia and SF
+
+Checking with argumenta of different type than str:
+
+    lists:
+        >>> text_indentation([2])
+	Traceback (most recent call last):
+	...
+    	TypeError: text must be a string
+
+    Tuple:
+        >>> text_indentation(('a'))
+	a
+
+    Dictionary:
+        >>> text_indentation({"a": "b"})
+	Traceback (most recent call last):
+	...
+    	TypeError: text must be a string
+
+    None:
+        >>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+    	TypeError: text must be a string
+
+Different format at arguments:
+    Any argument:
+        >>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    More than one argument:
+	>>> text_indentation("NICOLAS", "MORAN", "PULIDO")
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() takes 1 positional argument but 3 were given
