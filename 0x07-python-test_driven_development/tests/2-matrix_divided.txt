@@ -3,8 +3,7 @@ DocTest - Test driven Development
 ``2-matrix_divided`` module
 =================================
 
-Function ``matrix_divided``, the definition of the function is:
- ``def matrix_divided(matrix, div)``
+Function ``matrix_divided``, the definition of the function is: ``def matrix_divided(matrix, div)``
 
 
 Verifying the importation of the function from the module:

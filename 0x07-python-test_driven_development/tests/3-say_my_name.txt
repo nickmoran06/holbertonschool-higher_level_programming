@@ -3,8 +3,7 @@ DocTest - Test driven Development
 ``3-say_my_name`` module
 =================================
 
-Function ``say_my_name``, the definition of the function is:
-``def say_my_name(first_name, last_name=""):``
+Function ``say_my_name``, the definition of the function is: ``def say_my_name(first_name, last_name=""):``
 
 
 Verifying the importation of the function from the module:
