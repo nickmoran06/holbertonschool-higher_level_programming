@@ -1,0 +1,11 @@
+DocTest - Test driven Development
+
+``4-print_square`` module
+=================================
+
+Function ``print_square``, the definition of the function is: ``def print_square(size):``
+
+Verifying the importation of the function from the module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
