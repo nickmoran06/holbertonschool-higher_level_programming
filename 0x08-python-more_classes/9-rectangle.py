@@ -35,6 +35,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        # return the height and width as the same value
         return cls(size, size)
 
     @staticmethod
