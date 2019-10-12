@@ -5,5 +5,7 @@ def text_indentation(text):
     text = text.replace(". ", ".\n\n")
     text = text.replace("? ", "?\n\n")
     text = text.replace(": ", ":\n\n")
-
+    text = text.replace(".", ".\n\n")
+    text = text.replace(":", ":\n\n")
+    text = text.replace("?", "?\n\n")
     print("{:s}".format(text))
