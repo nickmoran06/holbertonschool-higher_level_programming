@@ -13,7 +13,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_repeated_number(self):
         self.assertEqual(max_integer([123, 123, 123]), 123)
 
-    def test_neg_numbers(self):
+    def test_negative_int(self):
         self.assertEqual(max_integer([-10, -234, -17, -7]), -7)
 
     def test_empty_list(self):
@@ -23,14 +23,10 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(6)
 
-    def test_string_number_in_a_list(self):
+    def test_string(self):
         with self.assertRaises(TypeError):
             max_integer([23, 'a'])
 
-    def test_dictionary(self):
-        with self.assertRaises(KeyError):
-            max_integer({'a': b, 'b': c})
-
-    def test_tuple_in_a_list(self):
+    def test_tuple(self):
         with self.assertRaises(TypeError):
             max_integer([23, (12, 45)])
