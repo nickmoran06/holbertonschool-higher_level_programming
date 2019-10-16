@@ -50,6 +50,12 @@ Empty area
     ...
     Exception: area() is not implemented
 
+More than 1 argument in area
+    >>> b.area(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
 1 as parameter
     >>> b = BaseGeometry()
     >>> b.integer_validator("age", 1)
