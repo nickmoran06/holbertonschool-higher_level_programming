@@ -40,4 +40,55 @@ Any argument
     >>> b = BaseGeometry()
     >>> b.integer_validator()
     Traceback (most recent call last):
+    ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Empty area
+    >>> b = BaseGeometry()
+    >>> b.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+1 as parameter
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", 1)
+
+More than 1
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", 4)
+
+Review a tuple
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Review list
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", [3])
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Review boolean
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Review dictionary
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+Review None
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
