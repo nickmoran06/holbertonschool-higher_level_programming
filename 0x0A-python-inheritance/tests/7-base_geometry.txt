@@ -60,9 +60,12 @@ More than 1 argument in area
     >>> b = BaseGeometry()
     >>> b.integer_validator("age", 1)
 
-More than 1
+Number as string
     >>> b = BaseGeometry()
-    >>> b.integer_validator("age", 4)
+    >>> b.integer_validator("age", "4")
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
 
 Review a tuple
     >>> b = BaseGeometry()
