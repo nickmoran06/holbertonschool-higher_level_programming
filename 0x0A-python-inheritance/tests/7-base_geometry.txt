@@ -1,0 +1,43 @@
+``7-base_geometry`` module
+
+============================
+
+Importation:
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+List instead integer
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("Nicolas", [Moran])
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Moran' is not defined
+
+Negative number
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("Negative", -4)
+    Traceback (most recent call last):
+    ValueError: Negative must be greater than 0
+
+Zero number
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("ZERO", 0)
+    Traceback (most recent call last):
+    ValueError: ZERO must be greater than 0
+
+Without the second argument
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("name")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Withoutthe first argument
+    >>> b = BaseGeometry()
+    >>> b.integer_validator(, 12)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+Any argument
+    >>> b = BaseGeometry()
+    >>> b.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
