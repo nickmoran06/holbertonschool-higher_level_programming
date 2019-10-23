@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-
+"""
+The module of the base class
+"""
 import json
 
 
 class Base:
-    """The goal of this class is to manage id attribute
-    in all your future classes and to avoid duplicating the same code"""
-
+    """
+    The goal of this class is to manage id attribute
+    in all your future classes and to avoid duplicating the same code
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):

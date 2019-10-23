@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-
+"""
+module of the square class
+"""
 from models import rectangle
 Rectangle = rectangle.Rectangle
 
 
 class Square(Rectangle):
-    """Square representation"""
+    """
+    Square representation
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """Initilize the values of the square"""
         super().__init__(size, size, x, y, id)

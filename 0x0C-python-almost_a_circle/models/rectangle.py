@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-
+"""
+Module of the rectangle class
+"""
 from models import base
 Base = base.Base
 
 
 class Rectangle(Base):
-    """Rectangle representation"""
+    """
+    Rectangle representation
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialization of the atributtes"""
