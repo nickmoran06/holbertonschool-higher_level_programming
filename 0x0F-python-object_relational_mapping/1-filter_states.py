@@ -15,5 +15,5 @@ if __name__ == "__main__":
     for row in rows:
         if row[1][0] == 'N':
             print(row)
-    cursor.close()
+    cur.close()
     db.close()
