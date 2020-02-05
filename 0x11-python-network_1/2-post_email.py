@@ -10,7 +10,7 @@ if __name__ == "__main__":
     from sys import argv
 
     args = {'email': argv[2]}
-    body = parse.urlencode(args)
+    body = parse.urlencode(args).encode('utf-8')
     req = request.Request(argv[1], body)
     with request.urlopen(req) as res:
         print(res.read().decode('utf-8'))
