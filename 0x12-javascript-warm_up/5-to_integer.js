@@ -1,6 +1,6 @@
 #!/usr/bin/node
-let lenArgs = process.argv.length;
-let integer = parseInt(process.argv[2]);
+const lenArgs = process.argv.length;
+const integer = parseInt(process.argv[2]);
 
 if (lenArgs <= 2) {
   console.log('Not a number');

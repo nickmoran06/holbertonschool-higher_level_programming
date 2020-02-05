@@ -1,5 +1,6 @@
 #!/usr/bin/node
-let num = parseInt(process.argv[2]);
+let num = 0;
+num = parseInt(process.argv[2]);
 
 console.log(factorial(parseInt(num)));
 
