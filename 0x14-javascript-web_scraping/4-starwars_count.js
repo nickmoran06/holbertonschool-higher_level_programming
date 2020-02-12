@@ -15,14 +15,14 @@ request(url, function (err, response, body) {
   } else {
     let count = 0;
     const results = JSON.parse(body).results;
-    for (let films in results) {
-      const characters = films.characters;
-      for (let character in characters) {
-        if (character.includes('18')) {
+    for (const films in results) {
+      const characters = results[films].characters;
+      for (const character in characters) {
+        if (characters[character].includes('18')) {
           count++;
         }
       }
     }
-    console.log(count)
+    console.log(count);
   }
 });
